@@ -2,8 +2,8 @@
 
 //--------------------------------------------------------------
 void ofApp::setup(){
- 
-   
+    
+    background.loadImage("background.jpg");
 }
 
 //--------------------------------------------------------------
@@ -42,13 +42,17 @@ void ofApp::update(){
 //--------------------------------------------------------------
 void ofApp::draw(){
     
-    ofColor white;
-    ofColor green;
+    ofSetColor(255);
+
+    background.draw(0, 0);
     
-    white.set (255, 255, 255);
-    green.set (201, 231, 172);
-    
-    ofBackgroundGradient(white, green, OF_GRADIENT_LINEAR);
+//    ofColor white;
+//    ofColor green;
+//    
+//    white.set (255, 255, 255);
+//    green.set (201, 231, 172);
+//    
+//    ofBackgroundGradient(white, green, OF_GRADIENT_LINEAR);
     
     for (int i = 0; i < bubbles.size(); i ++) {
         bubbles[i].draw();

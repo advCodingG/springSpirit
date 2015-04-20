@@ -29,6 +29,7 @@ class ofApp : public ofBaseApp{
     // add another vector
     // write another class
     
+    ofImage background;
     vector<Bubble> bubbles;
     vector<Flower> flowers;
 };
