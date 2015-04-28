@@ -9,13 +9,13 @@ void ofApp::setup(){
 //--------------------------------------------------------------
 void ofApp::update(){
 
-    
+    //the butterfilies fire every 3 seconds
     int time = ofGetSeconds();
    
-    if( remainder(time, 3) == 0){
+    if( (time % 3) == 0 ){
         Bubble tempBubble;
         tempBubble.setup(ofGetMouseX(), ofGetMouseY());
-        bubbles.push_back(tempBubble); // add one bubble to the beginning of the vector, the vector keeps getting bigger;
+        bubbles.push_back(tempBubble); // add one bubble to the vector, the vector keeps getting bigger;
     }
     
     for (int i = 0; i < bubbles.size(); i ++) {
@@ -71,6 +71,7 @@ void ofApp::draw(){
 
 //--------------------------------------------------------------
 void ofApp::mousePressed(int x, int y, int button){
+    //the flower is placed only when the mouse is pressed
     
     if(button == OF_MOUSE_BUTTON_LEFT){
         Flower tempFlower;

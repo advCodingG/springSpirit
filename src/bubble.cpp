@@ -22,7 +22,7 @@ void Bubble::setup(float x_, float y_){
 }
 
 void Bubble::draw(){
-    
+    //tint the image so that the every butterfly is a special snowflake
     ofSetColor(myColor);
     
     ofPushMatrix();
@@ -36,7 +36,8 @@ void Bubble::draw(){
  }
 
 void Bubble::update(){
-   // deg+=abs( ofDist(ofGetMouseX(),ofGetMouseY(), pos.x, pos.y) / 20);
+    
+   // the butterflies bounce back and forth between certain range to give them some movements
     if((abs(pos.x) < abs(ofGetMouseX() + 100) && abs(pos.y) < abs(ofGetMouseY() + 100))
        ||(abs(pos.x) > abs(ofGetMouseX() + 300) && abs(pos.y) > abs(ofGetMouseY() +100))
        ){

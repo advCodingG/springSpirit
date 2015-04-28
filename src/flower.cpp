@@ -34,6 +34,8 @@ void Flower::draw(){
 }
 
 void Flower::update(){
+    
+    //the flower rotates after it is placed
     flowerDeg+=1;
     
 }
